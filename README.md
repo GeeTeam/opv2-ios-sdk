@@ -60,7 +60,7 @@ git clone git@github.com:GeeTeam/opv2-ios-sdk.git
 1. 用 `customID` 初始化 GOPManager 实例
 
     ```objc
-    GOPManager *manager = [[GOPManager alloc] initWithCustomID:customID verifyUrl:verify_Url timeout:10.0];
+    GOPManager *manager = [[GOPManager alloc] initWithCustomID:customID timeout:10.0];
     ```
 
 2. 获取校验数据
