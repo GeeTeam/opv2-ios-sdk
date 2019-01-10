@@ -6,21 +6,22 @@
 
 ErrorCode	|Description	
 ----------|------------	
--20301 | GOPErrorInvalidPhoneNumber 手机号码不可用
--20302 | GOPErrorUnsupportedNetwork 网络不支持
--20303 | GOPErrorUnsupportedOperator 运营商不支持
--20304 | GOPErrorEmptyOperatorURL 服务端返回运营商URL为空
--39900 | GOPErrorGenericNetworkError 网络错误，原始错误见userInfo 中的 GOPErrorOriginalErrorKey
--39901 | GOPErrorSocketError Socket 错误
--39902 | GOPErrorReceiveEmptyDataError 服务器返回数据为空
--40101 | GOPErrorCMGetTokenFail 移动获取 token 失败
--40104 | GOPErrorCMUnsupportedNetwork 移动不支持的网络
--40201 | GOPErrorCUGetTokenFail 联通获取 token 失败
--40204 | GOPErrorCUUnsupportedNetwork 联通不支持的网络
--40301 | GOPErrorCTGetTokenFail 电信获取 token 失败
--40302 | GOPErrorCTResultParseError 电信返回结果解析失败
--40304 | GOPErrorCTUnsupportedNetwork 电信不支持的网络
--50100 | GOPErrorInvalidPreGatewayReturns pregateway 返回结果有误
+-20301 | `GOPErrorInvalidPhoneNumber` 手机号码不可用
+-20302 | `GOPErrorUnsupportedNetwork` 网络不支持
+-20303 | `OPErrorUnsupportedOperator` 运营商不支持
+-20304 | `GOPErrorEmptyOperatorURL` 服务端返回运营商URL为空
+-39900 | `GOPErrorGenericNetworkError` 网络错误，原始错误见userInfo 中的 GOPErrorOriginalErrorKey
+-39901 | `GOPErrorSocketError` Socket 错误
+-39902 | `GOPErrorReceiveEmptyDataError` 服务器返回数据为空
+-40101 | `GOPErrorCMGetTokenFail` 移动获取 token 失败
+-40104 | `GOPErrorCMUnsupportedNetwork` 移动不支持的网络
+-40201 | `GOPErrorCUGetTokenFail` 联通获取 token 失败
+-40204 | `GOPErrorCUUnsupportedNetwork` 联通不支持的网络
+-40301 | `GOPErrorCTGetTokenFail` 电信获取 token 失败
+-40302 | `GOPErrorCTResultParseError` 电信返回结果解析失败
+-40304 | `GOPErrorCTUnsupportedNetwork` 电信不支持的网络
+-49900 | `GOPErrorOperatorUnknownError` 未知的运营商错误
+-50100 | `GOPErrorInvalidPreGatewayReturns` pregateway 返回结果有误
 
 ## Cocoa Error
 
