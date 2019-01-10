@@ -28,10 +28,11 @@ typedef NS_ENUM(NSUInteger, GOPErrorCode) {
     GOPErrorCMGetTokenFail              = -40101,
     GOPErrorCMUnsupportedNetwork        = -40104,
     GOPErrorCUGetTokenFail              = -40201,
-    GOPErrorCUUnsupportedNetwork        = -40104,
+    GOPErrorCUUnsupportedNetwork        = -40204,
     GOPErrorCTGetTokenFail              = -40301,
     GOPErrorCTResultParseError          = -40302,
-    GOPErrorCTUnsupportedNetwork        = -40104,
+    GOPErrorCTUnsupportedNetwork        = -40304,
+    GOPErrorOperatorUnknownError        = -49900,
     // Server Error
     GOPErrorInvalidPreGatewayReturns    = -50100,
 };
