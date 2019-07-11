@@ -17,15 +17,13 @@
     if (self) {
         self.delegate = self;
         [self addObserver:self forKeyPath:@"contentSize" options:  (NSKeyValueObservingOptionNew) context:NULL];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.7];
-            self.frame = CGRectMake(0, 0, 210, 90);
-            self.attributedText = [NSAttributedString generate:tip fontSize:size color:[UIColor whiteColor]];
-            self.textColor = [UIColor whiteColor];
-            [self setClipsToBounds:YES];
-            self.layer.cornerRadius = 5.0;
-            self.textAlignment = NSTextAlignmentCenter;
-        });
+        self.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.7];
+        self.frame = CGRectMake(0, 0, 210, 90);
+        self.attributedText = [NSAttributedString generate:tip fontSize:size color:[UIColor whiteColor]];
+        self.textColor = [UIColor whiteColor];
+        [self setClipsToBounds:YES];
+        self.layer.cornerRadius = 5.0;
+        self.textAlignment = NSTextAlignmentCenter;
     }
     
     return self;
@@ -51,28 +49,26 @@
 #pragma mark Intance Method
 
 + (void)showTipOnKeyWindow:(NSString *)tip {
-    TipsView *view = [[TipsView alloc] initWithFrame:CGRectZero tip:tip fontSize:14.0];
-    
-    [view layoutTipsView];
+    [self showTipOnKeyWindow:tip fontSize:14.0];
 }
 
 + (void)showTipOnKeyWindow:(NSString *)tip fontSize:(CGFloat)size {
-    TipsView *view = [[TipsView alloc] initWithFrame:CGRectZero tip:tip fontSize:size];
-    
-    [view layoutTipsView];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        TipsView *view = [[TipsView alloc] initWithFrame:CGRectZero tip:tip fontSize:size];
+        
+        [view layoutTipsView];
+    });
 }
 
 - (void)layoutTipsView {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        UIControl *control = [[UIControl alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-        [control addTarget:self action:@selector(userDidTouchControl) forControlEvents:UIControlEventTouchUpInside];
-        self.center = control.center;
-        [control addSubview:self];
-        
-        UIWindow *window = [[UIApplication sharedApplication].delegate window];
-        control.center = window.center;
-        [window addSubview:control];
-    });
+    UIControl *control = [[UIControl alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [control addTarget:self action:@selector(userDidTouchControl) forControlEvents:UIControlEventTouchUpInside];
+    self.center = control.center;
+    [control addSubview:self];
+    
+    UIWindow *window = [[UIApplication sharedApplication].delegate window];
+    control.center = window.center;
+    [window addSubview:control];
 }
 
 - (void)userDidTouchControl {

@@ -161,12 +161,16 @@
     req.HTTPMethod = @"POST";
     req.HTTPBody = [NSJSONSerialization dataWithJSONObject:data options:0 error:nil];
     NSURLSessionDataTask *task = [NSURLSession.sharedSession dataTaskWithRequest:req completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+#warning
+        // TO-DO
         // 处理校验结果
     }];
     [task resume];
 }
 
 - (void)gtOnePass:(GOPManager *)managner errorHandler:(GOPError *)error {
+#warning
+    // TO-DO
     // 获取校验信息失败，可在此处进行回退处理，例如发送短信。
 }
 

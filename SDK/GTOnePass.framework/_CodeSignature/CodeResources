@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/GOPError.h</key>
 		<data>
-		ANXSNrOTqZkRW8iZ/1kUvY3sMO8=
+		QCZoWt6IffV5aCxIt9EOmlotYos=
 		</data>
 		<key>Headers/GOPManager.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		8xIJLFNQYa6alXoPxvREsk24k5U=
+		vQHRSUi2/BNrtQIqbR+N8QCuD4w=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -31,11 +31,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ANXSNrOTqZkRW8iZ/1kUvY3sMO8=
+			QCZoWt6IffV5aCxIt9EOmlotYos=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZfKcz0aAUuvuKMvF1tIdJqnl5o0quQrT5jvAZKxjwag=
+			PcvtBvKPlCgV6KSxBfq2FT4Y15DFpZ0m2YusdHuJ+hs=
 			</data>
 		</dict>
 		<key>Headers/GOPManager.h</key>

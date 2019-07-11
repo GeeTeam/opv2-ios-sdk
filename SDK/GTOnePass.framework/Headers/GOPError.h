@@ -14,7 +14,7 @@ FOUNDATION_EXPORT NSErrorUserInfoKey const GOPErrorOriginalErrorKey;
 FOUNDATION_EXPORT NSErrorUserInfoKey const GOPFailingURLErrorKey;
 FOUNDATION_EXPORT NSErrorUserInfoKey const GOPMetadataErrorKey;
 
-typedef NS_ENUM(NSUInteger, GOPErrorCode) {
+typedef NS_ENUM(NSInteger, GOPErrorCode) {
     // Client Error
     GOPErrorInvalidPhoneNumber          = -20301,
     GOPErrorUnsupportedNetwork          = -20302,
