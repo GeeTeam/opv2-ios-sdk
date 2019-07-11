@@ -41,7 +41,7 @@ git clone git@github.com:GeeTeam/opv2-ios-sdk.git
 
 ## 导入SDK并配置环境
 
-1. 将下载获取的`GTOnePass.framework`, `TYRZNoUISDK.framework`,`GT3Captcha.framework`及`GT3Captcha.bunele`4个文件拖拽到工程中, 确保`Copy items if needed`已被勾选。
+1. 将下载获取的`GTOnePass.framework`, `TYRZSDK.framework`,`GT3Captcha.framework`及`GT3Captcha.bunele`4个文件拖拽到工程中, 确保`Copy items if needed`已被勾选。
 
 	![import](./img/import.png)
 	
