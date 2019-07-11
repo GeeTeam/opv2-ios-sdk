@@ -49,8 +49,6 @@
 @property (nonatomic, strong) GT3CaptchaEX *captchaEx;
 @property (nonatomic, strong) GOPManager *manager;
 
-@property (nonatomic, strong) UIAlertController *alertController;
-
 @end
 
 @implementation PhoneNumViewController
@@ -161,15 +159,28 @@
     req.HTTPMethod = @"POST";
     req.HTTPBody = [NSJSONSerialization dataWithJSONObject:data options:0 error:nil];
     NSURLSessionDataTask *task = [NSURLSession.sharedSession dataTaskWithRequest:req completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-#warning
         // TO-DO
         // 处理校验结果
+        // 移除进度指示器
+        [self.nextButton gtm_removeIndicator];
+#warning 处理服务器返回的校验结果。此处假定校验通过。
+        if (YES) {
+            UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            ResultViewController *vc = [sb instantiateViewControllerWithIdentifier:@"result"];
+            vc.delegate = self;
+            vc.type = self.type;
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self presentViewController:vc animated:YES completion:nil];
+            });
+        } else {
+            // 校验失败。进一步处理，例如发短信。
+        }
     }];
     [task resume];
 }
 
 - (void)gtOnePass:(GOPManager *)managner errorHandler:(GOPError *)error {
-#warning
+#warning 处理错误
     // TO-DO
     // 获取校验信息失败，可在此处进行回退处理，例如发送短信。
 }
